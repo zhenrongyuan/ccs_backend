@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"d9dc697d7a3a40aca674ec50a37721c8","collectionName":"estados_cuentas","type":"collection"}

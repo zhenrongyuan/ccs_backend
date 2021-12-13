@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"5ea0b3cb2f544bba9a45d88a1a19cc96","collectionName":"estados_comandas","type":"collection"}
