@@ -1,9 +1,9 @@
 'use strict'
 
-var express = require('express');
-var controller = require('../controllers/ComandaController');
+let express = require('express');
+let controller = require('../controllers/ComandaController');
 
-var api = express.Router();
+let api = express.Router();
 
 api.get('/comanda', controller.obtenerTodos);
 api.get('/comanda/:id', controller.obtener);

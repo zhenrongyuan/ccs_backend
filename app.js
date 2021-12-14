@@ -2,30 +2,32 @@
 'use strict'
 
 // Se carga el módulo express.
-var express = require('express');
+let express = require('express');
 // Se carga el módulo bodyParser.
-var bodyParser = require('body-parser');
+let bodyParser = require('body-parser');
 
 // Llamada a express.
-var app = express();
+let app = express();
 
 // cargar rutas de la app.
-var clienteRoute = require('./routes/ClienteRoute');
-var comandaRoute = require('./routes/ComandaRoute');
-var estadoComandaRoute = require('./routes/EstadoComandaRoute');
-var estadoProductoRoute = require('./routes/EstadoProductoRoute');
-var estadoReservaRoute = require('./routes/EstadoReservaRoute');
-var estadoUsuarioRoute = require('./routes/EstadoUsuarioRoute');
-var estadoCuentaRoute = require('./routes/EstadoCuentaRoute');
-var medioDePagoRoute = require('./routes/MedioDePagoRoute');
-var mesaRoute = require('./routes/MesaRoute');
-var perfilRoute = require('./routes/PerfilRoute');
-var personalRoute = require('./routes/PersonalRoute');
-var reservaRoute = require('./routes/ReservaRoute');
-var tipoComandaRoute = require('./routes/TipoComandaRoute');
-var tipoProductoRoute = require('./routes/TipoProductoRoute');
-var productoRoute = require('./routes/ProductoRoute');
-var usuarioRoute = require('./routes/UsuarioRoute');
+let clienteRoute = require('./routes/ClienteRoute');
+let comandaRoute = require('./routes/ComandaRoute');
+let estadoComandaRoute = require('./routes/EstadoComandaRoute');
+let estadoProductoRoute = require('./routes/EstadoProductoRoute');
+let estadoReservaRoute = require('./routes/EstadoReservaRoute');
+let estadoUsuarioRoute = require('./routes/EstadoUsuarioRoute');
+let estadoCuentaRoute = require('./routes/EstadoCuentaRoute');
+let medioDePagoRoute = require('./routes/MedioDePagoRoute');
+let mesaRoute = require('./routes/MesaRoute');
+let perfilRoute = require('./routes/PerfilRoute');
+let personalRoute = require('./routes/PersonalRoute');
+let reservaRoute = require('./routes/ReservaRoute');
+let tipoComandaRoute = require('./routes/TipoComandaRoute');
+let tipoProductoRoute = require('./routes/TipoProductoRoute');
+let productoRoute = require('./routes/ProductoRoute');
+let usuarioRoute = require('./routes/UsuarioRoute');
+let cuentaRoute = require('./routes/CuentaRoute');
+
 
 
 // body parser (middleware -> instrucción que se ejecuta antes de una petición http).
@@ -51,6 +53,8 @@ app.use('/api', tipoComandaRoute);
 app.use('/api', tipoProductoRoute);
 app.use('/api', productoRoute);
 app.use('/api', usuarioRoute);
+app.use('/api', cuentaRoute);
+
 
 // Hacerlo un módulo para que se pueda importar en otro lado.
 module.exports = app;

@@ -1,8 +1,8 @@
 'use strict'
 
-var mongoose = require('mongoose');
-var app = require('./app');
-var port = 3800;
+let mongoose = require('mongoose');
+let app = require('./app');
+let port = 3800;
 mongoose.connect('mongodb://localhost:27017/ccs_restaurant_menchoy')
     .then(() => {
         console.log('La conexión a MongoDB se ha realizado correctamente!');

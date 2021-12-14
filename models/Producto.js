@@ -1,10 +1,10 @@
 'use strict'
 
-var mongoose = require('mongoose');
+let mongoose = require('mongoose');
 
-var Schema = mongoose.Schema;
+let Schema = mongoose.Schema;
 
-var ProductoSchema = Schema({
+let ProductoSchema = Schema({
     nombre: String,
     descripcion: String,
     precio: Number,

@@ -1,9 +1,9 @@
 'use strict'
 
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+let mongoose = require('mongoose');
+let Schema = mongoose.Schema;
 
-var UsuarioSchema = Schema({
+let UsuarioSchema = Schema({
     personal: {
         rut: String,
         nombre: String,

@@ -1,6 +1,6 @@
 'use strict'
 
-var ModeloObjeto = require('../models/Reserva');
+let ModeloObjeto = require('../models/Reserva');
 
 function obtenerTodos(request, response) {
     ModeloObjeto.find({}).exec((error, reserva) => {
@@ -19,7 +19,7 @@ function obtenerTodos(request, response) {
 }
 
 function obtener(request, response) {
-    var modeloObtenidoId = request.params.id;
+    let modeloObtenidoId = request.params.id;
 
     ModeloObjeto.findById(modeloObtenidoId).exec((error, modeloObtenido) => {
         if (error) {
@@ -37,9 +37,9 @@ function obtener(request, response) {
 }
 
 function guardar(request, response) {
-    var modeloObtenido = new ModeloObjeto();
+    let modeloObtenido = new ModeloObjeto();
 
-    var params = request.body;
+    let params = request.body;
     if (params.cliente.nombre && params.cliente.correo &&
         params.cliente.celular && params.fecha_reserva &&
         params.cantidad_personas) {
@@ -73,8 +73,8 @@ function guardar(request, response) {
 }
 
 function actualizar(request, response) {
-    var modeloObtenidoId = request.params.id;
-    var update = request.body;
+    let modeloObtenidoId = request.params.id;
+    let update = request.body;
 
     ModeloObjeto.findByIdAndUpdate(modeloObtenidoId, update, { new: true }, (error, modeloObtenido) => {
         if (error) {
@@ -92,7 +92,7 @@ function actualizar(request, response) {
 }
 
 function eliminar(request, response) {
-    var modeloObtenidoId = request.params.id;
+    let modeloObtenidoId = request.params.id;
 
     ModeloObjeto.findByIdAndRemove(modeloObtenidoId, (error, modeloRemovido) => {
         if (error) {

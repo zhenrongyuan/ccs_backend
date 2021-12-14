@@ -1,9 +1,9 @@
 'use strict'
 
-var express = require('express');
-var controller = require('../controllers/EstadoProductoController');
+let express = require('express');
+let controller = require('../controllers/EstadoProductoController');
 
-var api = express.Router();
+let api = express.Router();
 
 api.post('/estado_producto', controller.guardar);
 api.get('/estado_producto', controller.obtenerTodos);

@@ -1,9 +1,9 @@
 'use strict'
 
-var express = require('express');
-var controller = require('../controllers/PersonalController');
+let express = require('express');
+let controller = require('../controllers/PersonalController');
 
-var api = express.Router();
+let api = express.Router();
 
 api.get('/personal', controller.obtenerTodos);
 api.get('/personal/:id', controller.obtener);

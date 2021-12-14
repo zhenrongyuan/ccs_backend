@@ -1,9 +1,9 @@
 'use strict'
 
-var express = require('express');
-var controller = require('../controllers/MesaController');
+let express = require('express');
+let controller = require('../controllers/MesaController');
 
-var api = express.Router();
+let api = express.Router();
 
 api.post('/mesa', controller.guardar);
 api.get('/mesa', controller.obtenerTodos);
