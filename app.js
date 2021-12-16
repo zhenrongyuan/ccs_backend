@@ -2,12 +2,13 @@
 'use strict'
 
 // Se carga el módulo express.
-let express = require('express');
-// Se carga el módulo bodyParser.
-let bodyParser = require('body-parser');
-
-// Llamada a express.
-let app = express();
+const express = require('express'),
+    // Se carga el módulo bodyParser.
+    bodyParser = require('body-parser'),
+    // Llamada a express.
+    app = express(),
+    jwt = require('jsonwebtoken'),
+    config = require('./configs/config');
 
 // cargar rutas de la app.
 let clienteRoute = require('./routes/ClienteRoute');
